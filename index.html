@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Transaction</title>
+    <link rel="shortcut icon" href="atm.avif" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripting.js"></script>
+</head>
+<body>
+    <div style="display: flex; height: 600px; align-items: center; justify-content: center;">
+        <div style="width: 700px; border: red 4px solid;padding: 2%; background-color: black;color: aquamarine; font-size: 25px;">
+            <span>Balance: ₹</span><span id="bal">1</span>
+            <script>
+                var k=prompt("Enter your initial balance:");
+                if(k==null || k==""|| isNaN(k) || k<3000){
+                    alert("Please enter a valid amount");
+                    window.location.reload();
+                }
+                document.getElementById("bal").innerText=parseInt(k);</script>
+            <form>
+                <p>Select What you want to do?</p>
+              <center>  <select id="sel" required onchange="check()">
+                    <option value="n">Select</option>
+                    <option value="w">Withdraw</option>
+                    <option value="d">Deposit</option>
+                    <option value="c">Check Balance</option>
+                </select></center>
+               <center> <input type="number" id="money" placeholder="Enter amount" required style="display: none;" min="100" ></center>
+                <center><p id="warn">*Please select a valid option</p></center>
+                <center><button type="button" onclick="perform()" id="sub"><span id="act"></span></button></center>
+                <center><p id="msg1">₹<span id="mon"></span> has been <span id="act1"></span></p></center>
+                <center><p id="msg2">Your current balance is: ₹<span id="bal1"></span></p></center>
+                <center><p id="alrt" style="display: none;color: red;">Balance cannot be less than ₹3000</p></center>
+                <center><p id="alrt1" style="display: none;color:red;">Withdraw amount is greater than balance.</p></center>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

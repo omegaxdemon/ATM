@@ -1,0 +1,53 @@
+#sel{
+    border-radius: 25px;
+    padding: 4%;
+    text-align: center;
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    font-size: large;
+}
+option{
+    background-color: transparent;
+    color: white;
+    color : black;
+}
+#money{
+    margin-top: 2rem;
+    padding: 1%;
+    text-align: center;
+    border-radius: 25px;
+    border: 0px solid transparent;
+}
+#warn{
+    display: none;
+    margin-top: 1rem;
+    color: red;
+    font-size: 1rem;
+}
+#sub{
+    margin-top: 5%;
+    padding: 5%;
+    width: 150px;
+    background-color: greenyellow;
+    border-radius: 25px;
+    border: 0px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+#sub:hover{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+#act{
+    width: 70px;
+}
+#msg1{
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+#msg2{
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
